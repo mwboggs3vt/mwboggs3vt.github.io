@@ -1,15 +1,23 @@
+
+/* ========================================
+   MASON BOGGS - PERSONAL WEBSITE
+   ======================================== */
+
+/* COLOR SCHEME */
+
 :root {
-    --primaryText: #fff;
-    --secondaryText: #ff015e;
-    --primary: rgba(156, 39, 176, .60);
-    --secondary: rgba(255, 1, 94, .60); 
-    --buttonHover: rgba(156, 39, 176, .40);
-    --smallButtonHover: rgba(0, 0, 0, .25);
+    --primaryText: #F4EBDD;
+    --secondaryText: #E8C88C;
+    --primary: rgba(39, 71, 61, 0.94);
+    --secondary: rgba(55, 91, 73, 0.96);
+    --buttonHover: rgba(69, 107, 84, 0.96);
+    --smallButtonHover: rgba(244, 235, 221, 0.18);
 }
+
+/* GENERAL PAGE SETTINGS */
 
 html {
     box-sizing: border-box;
-    /* keeps button boxes within phone screen width */
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     height: 100%;
@@ -24,51 +32,73 @@ html {
 body {
     margin: 0;
     min-height: 100%;
-    /* The image used for the site background. Try changing skyscape.jpg to stars.jpg. Put a replacement photo in the images folder and, in line 21 below, replace skyscape.jpg with yourbackgroundfilename.jpg */
-    /* The linear gradient darkens the image, like putting a sunglasses lens on top of it. If you want to darken the image even more, change 0.1 (both times) to 0.3 or higher */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/skyscape.jpg);
-    /* Prevents the browser from repeating or "tiling" the background image */
+
+    /* Background image and dark overlay */
+    background-color: #193329;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("../images/dragonstoothpathbackground.png");
+
     background-repeat: no-repeat;
     background-position: center;
-    /* Freezes the image so that even the content scrolls down, the background stays put */
     background-attachment: fixed;
-    /* Resizes the background image to cover the entire container */
     background-size: cover;
-    font-family: Futura, Verdana, sans-serif;
-    line-height: 1.5;
+
+    /* Google Font */
+    font-family: "Lora", Georgia, serif;
+
+    line-height: 1.6;
     font-size: 18px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
+/* HEADINGS */
+
 h1 {
-    font-size: 1em;
+    font-size: 1.15em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 h2 {
-    font-size: 1em;
-    margin-bottom: 0;
+    font-size: 1.05em;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+    color: var(--secondaryText);
 }
 
+/* PROFILE IMAGE */
+
 img {
-    margin: .5em 1em;
-    /* border: 1px solid #ccc; */
+    margin: 0.5em 1em;
     border-radius: 50%;
+    width: 150px;
     height: 150px;
     max-width: 100%;
     object-fit: cover;
-    /* Resizes the image to cover the entire container */
+
+    border: 3px solid var(--secondaryText);
 }
+
+/* MAIN CONTAINER */
 
 .container {
     text-align: center;
-    width: 100%;    
-    padding: 0;
+    width: 100%;
+    padding: 1em 0;
+
     margin-right: auto;
     margin-left: auto;
+
     flex: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,6 +108,8 @@ img {
     text-align: center;
     width: 100%;
 }
+
+/* TEXT COLORS */
 
 .main-text-color {
     color: var(--primaryText);
@@ -89,11 +121,18 @@ img {
 
 .name strong {
     background-color: rgba(0, 0, 0, 0.50);
+    padding: 0.1em 0.25em;
+    border-radius: 4px;
 }
 
+/* SECTION HEADINGS */
+
 .section-header {
-    padding-top: .5em;
+    padding-top: 0.7em;
+    margin-bottom: 0.3em;
 }
+
+/* BUTTONS AND CONTENT AREAS */
 
 .button,
 .intro,
@@ -101,115 +140,172 @@ img {
 .slidedown,
 .external-link {
     width: 100%;
-    min-width: 50%;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     text-decoration: none;
     color: inherit;
     text-align: center;
 }
 
-.button, .external-link {
+.button,
+.external-link {
     border: 1px solid var(--primaryText);
     border-radius: 20px;
-    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+
+    box-shadow:
+        7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+
     overflow: hidden;
-    white-space: nowrap;
     display: inline-block;
+
     background-color: var(--primary);
     cursor: pointer;
+
     transition: 0.2s all;
 }
 
+/* STANDARD BUTTONS */
+
 .button:not(.highlight) {
     background-color: var(--primary);
-}
-
-@media (hover: hover) {
-    .button:hover { background-color: var(--buttonHover); }
 }
 
 .button.highlight {
     background-color: var(--secondary);
 }
 
-.button:active, .external-link:active { 
-    transform: scale(0.98); 
-    /* Scaling button to 0.98 to its original size */ 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
-    /* Lowering the shadow */ 
-} 
+/* BUTTON HOVER EFFECTS */
+
+@media (hover: hover) {
+    .button:hover {
+        background-color: var(--buttonHover);
+    }
+}
+
+/* BUTTON CLICK EFFECT */
+
+.button:active,
+.external-link:active {
+    transform: scale(0.98);
+
+    box-shadow:
+        3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* INTRODUCTION */
 
 .intro {
     margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.8;
 }
+
+/* SECTIONS */
 
 .section {
     margin-top: 1em;
 }
 
+/* EXPANDABLE CONTENT */
+
 .slidedown {
     margin: 0 auto;
     padding: 0;
-    -webkit-transition: height .4s ease;
-    -o-transition: height .4s ease;
-    transition: height .4s ease;
+
+    -webkit-transition: height 0.4s ease;
+    -o-transition: height 0.4s ease;
+    transition: height 0.4s ease;
+
     overflow: hidden;
     height: 0;
 }
 
+/* EXTERNAL LINKS */
+
 .external-link {
-    border: 1px solid var(--primaryText);
-    border-radius: 20px;
     background-color: transparent;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 0;
-    margin: .5em auto 1.5em auto;
-    text-decoration: none;
+    margin: 0.7em auto 1.5em auto;
+
     color: inherit;
-    height: 2em;
-    width: 6em;
+    height: 2.2em;
+    width: 7em;
 }
 
 .external-link:hover {
-    background-color: var(--smallButtonHover)
+    background-color: var(--smallButtonHover);
 }
+
+/* PROJECT DESCRIPTIONS */
 
 .description {
     display: flex;
     text-align: left;
     flex-direction: column;
-    padding: 0 .6em;
+    padding: 0 0.8em;
 }
 
 .description > p {
-    margin: .5em 0;
+    margin: 0.5em 0;
 }
 
+/* ABOUT ME DESCRIPTION */
+
+.container > .description {
+    width: 90%;
+    max-width: 540px;
+
+    margin: 0.5em auto 1em auto;
+    padding: 1em 1.25em;
+
+    background-color: rgba(20, 42, 33, 0.75);
+    border: 1px solid rgba(244, 235, 221, 0.2);
+    border-radius: 12px;
+
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
 .footer {
-  font-size: .66em;
-  background-color: rgba(0, 0, 0, .5);
-  color: rgba(225, 225, 225, .8);
-  text-decoration: none;
-  width: 100%;
-  min-height: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    font-size: 0.66em;
+
+    background-color: rgba(0, 0, 0, 0.65);
+    color: rgba(244, 235, 221, 0.85);
+
+    text-decoration: none;
+
+    width: 100%;
+    min-height: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    text-align: center;
+    padding: 0.5em;
 }
 
 .footer a {
     color: inherit;
 }
 
-/* Media queries allow you to change style properties according to the screen width. In this case, if the screen is AT LEAST 540 pixels wide (bigger than a standard phone), the .container resizes to 540 pixels and the buttons and intro resize to 85% of the container width */
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* LAPTOP AND LARGER PHONES */
+
 @media (min-width: 540px) {
     .container {
         max-width: 540px;
     }
-    
+
     .button,
     .intro,
     .slidedown {
@@ -217,15 +313,44 @@ img {
     }
 }
 
-/* If the screen is AT LEAST 768 pixels wide (standard tablet or larger), the .container resizes to 750 pixels and the buttons and intro resize to 40% of the container width */
+/* TABLETS AND DESKTOPS */
+
 @media (min-width: 768px) {
     .container {
         max-width: 768px;
     }
-    
+
     .button,
-    .intro,
     .slidedown {
-        width: 40%;
+        width: 50%;
+    }
+
+    .intro {
+        width: 80%;
+    }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 539px) {
+    body {
+        font-size: 16px;
+        background-attachment: scroll;
+    }
+
+    .container {
+        padding: 1em 0.5em;
+    }
+
+    .button {
+        margin-bottom: 0.2em;
+    }
+
+    .container > .description {
+        width: 95%;
+    }
+
+    .footer {
+        padding: 1em;
     }
 }

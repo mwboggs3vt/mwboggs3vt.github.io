@@ -1,73 +1,137 @@
 
 <!DOCTYPE html>
-<!-- This page is adapted from w3schools "How to make a link tree website https://www.w3schools.com/howto/howto_website_create_linktree.asp" -->
+<!-- Adapted from the W3Schools Linktree website tutorial -->
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mason Boggs</title>
+
+  <title>Mason Boggs | Personal Website</title>
+
+  <!-- Existing stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts: Lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="main-text-color">
   <div class="container">
+
+    <!-- PROFILE IMAGE -->
     <div class="image-container">
-      <img src="images/portrait.jpg" alt="Photo by Art Hauntington">
+      <img
+        src="images/The wolfhounds and I.png"
+        alt="Picture of me, circa 2026">
     </div>
+
+    <!-- INTRODUCTION -->
     <div class="intro">
-      My name is <span class="name"><strong>Mason Boggs</strong></span>, I'm a student at VT looking to go into teaching. Im also a coffee adicted hiker. 
+      I'm <span class="name"><strong>Mason Boggs</strong></span>,
+      a college student with to many interests. 
     </div>
+
+    <!-- MY WORK -->
     <div class="section-header">
-      <h1>My work</h1>
+      <h1>My Work</h1>
     </div>
 
     <div class="links-container">
-      <div class="button toggle">Blog post</div>
+
+      <!-- BLOG POST -->
+      <div class="button toggle">Blog Post</div>
       <div class="slidedown">
         <div class="description">
           <h2>Do Humans Dream of Reading Still?</h2>
-          <p>Artificial intelligence is changing how we read, write, and engage with information. In this post, I explore the benefits and drawbacks of using AI in education, particularly how convenience might affect critical thinking, reading comprehension, and our ability to retain information.</p>
-          <a href="https://medium.com/@mwboggs3/do-humans-dream-of-reading-still-d7fa278c2989" class="external-link" target="_blank">Read</a>
-        </div>
-</div>
-
-      </div>
-
-      <div class="button toggle">Video</div>
-      <div class="slidedown">
-        <div class="description">
-          <h2>Video title</h2>
-          <p>Add a short but appealing description of your video.</p>
-          <a href="#" class="external-link" target="_blank">Watch</a>
+          <p>
+           Are we missing out on anything if a machine does all of our reading for us? 
+          </p>
+          <a href="https://medium.com/@mwboggs3/do-humans-dream-of-reading-still-d7fa278c2989"
+             class="external-link"
+             target="_blank"
+             rel="noopener noreferrer">Read My Post</a>
         </div>
       </div>
 
+      <!-- PODCAST -->
       <div class="button toggle">Podcast</div>
       <div class="slidedown">
         <div class="description">
-          <h2>Podcast title</h2>
-          <p>Add a short but appealing description of your podcast</p>
-          <a href="#" class="external-link" target="_blank">Listen</a>
+          <h2>PODCAST TITLE HERE</h2>
+          <p>
+            An audio project concerned with how using LLM's effects comprehension and appreciation 
+            of written media. 
+          </p>
+          <a href="PODCAST LINK HERE"
+             class="external-link"
+             target="_blank"
+             rel="noopener noreferrer">Listen Here</a>
         </div>
       </div>
+
+      <!-- VIDEO -->
+      <div class="button toggle">Video Project</div>
+      <div class="slidedown">
+        <div class="description">
+          <h2>VIDEO TITLE HERE</h2>
+          <p>
+            A step-by-step exploration of vivarium making as a hobby!
+          </p>
+          <a href="VIDEO LINK HERE"
+             class="external-link"
+             target="_blank"
+             rel="noopener noreferrer">Watch My Video</a>
+        </div>
+      </div>
+
     </div>
 
+    <!-- ABOUT ME -->
     <div class="section-header">
-      <h1>About me</h1>
+      <h1>About Me</h1>
     </div>
 
+    <div class="description">
+      <p>
+        My name is Mason Boggs, I'm a college student interested in the
+        connections between literature, psychology, and philosophy.
+        I enjoy creative projects that offer new ways of
+        looking at familiar ideas.
+      </p>
+      <p>
+        Outside of these projects, always interested to explore new ways of creative expression, 
+        but I'm also into coffee, horticulture, and anything outdoors! I'm currently looking to get more into backpacking. 
+      </p>
+    </div>
+
+    <!-- EXTERNAL RESOURCES -->
     <div class="links-container">
-      <a href="https://drive.google.com" class="button" target="_blank">Resume</a>
+
+      <a href="https://www.linkedin.com/in/mason-boggs-31bb9122b/"
+         class="button"
+         target="_blank"
+         rel="noopener noreferrer">LinkedIn</a>
+
     </div>
 
   </div>
+
+  <!-- FOOTER -->
   <div class="footer">
-    <p>© Mason Boggs, 2026. Based on a design by <a
-        href="https://www.w3schools.com/howto/howto_website_create_linktree.asp" target="_blank">w3schools</a>.
+    <p>
+      © Mason Boggs, 2026.
+      Based on a design by
+      <a href="https://www.w3schools.com/howto/howto_website_create_linktree.asp"
+         target="_blank"
+         rel="noopener noreferrer">W3Schools</a>.
     </p>
   </div>
-  <script type="text/javascript" src="js/slider.js"></script>
-</body>
 
+  <!-- EXISTING JAVASCRIPT -->
+  <script src="js/slider.js"></script>
+
+</body>
 </html>
